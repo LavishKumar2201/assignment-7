@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Lavish Kumar</h1>
+    </header>
+    <main>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <!-- Part 1: Personal Information -->
+            <h2>Personal Information</h2>
+            <form id="myForm" method="post" action="submit.php">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label>Gender:</label>
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male">Male</label>
+
+              <input type="radio" id="female" name="gender" value="female" required>
+              <label for="female">Female</label>
+
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+          <!-- Part 2: Contact Information -->
+          <div class="swiper-slide">
+            <h2>Contact Information</h2>
+            <form id="contactForm" method="post" action="submit.php">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required>
+
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" required></textarea>
+
+            </form>
+          </div>
+
+          <!-- Part 3: Payment Information -->
+          <div class="swiper-slide">
+            <h2>Payment Information</h2>
+            <form id="paymentForm" method="post" action="submit.php">
+              <label for="credit-card">Credit Card Number:</label>
+              <input type="text" id="credit-card" name="credit-card" required pattern="\d{10}">
+
+              <label for="expiration">Expiration Date:</label>
+              <input type="date" id="expiration" name="expiration" required>
+
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" name="cvv" required pattern="\d{3}">
+
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="form.js"></script>
+  </body>
+</html>
